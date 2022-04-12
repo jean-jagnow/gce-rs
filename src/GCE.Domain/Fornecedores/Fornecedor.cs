@@ -6,29 +6,33 @@ namespace GCE.Domain.Fornecedores
 {
     public class Fornecedor : Entity
     {
+        public Fornecedor(TipoEmpresa tipoEmpresa, bool nacional)
+        {
+            TipoEmpresa = tipoEmpresa;
+            Nacional = nacional;
+        }
+
         private Fornecedor()
         {
         }
 
         public eTipoFornecedor Tipo { get; private set; }
-        public bool Nacional { get; set; }
         public TipoEmpresa TipoEmpresa { get; set; }
+        public bool Nacional { get; set; }
 
         public PessoaFisica PessoaFisica { get; set; }
         public PessoaJuridica PessoaJuridica { get; set; }
 
-        public Fornecedor NovoPessoaFisica(TipoEmpresa tipoEmpresa, PessoaFisica pessoaFisica)
+        public Fornecedor NovoPessoaFisica(PessoaFisica pessoaFisica)
         {
             Tipo = eTipoFornecedor.Pessoa_Fisica;
-            TipoEmpresa = tipoEmpresa;
             PessoaFisica = pessoaFisica;
 
             return this;
         }
-        public Fornecedor NovoPessoaJuridica(TipoEmpresa tipoEmpresa,PessoaJuridica pessoaJuridica)
+        public Fornecedor NovoPessoaJuridica(PessoaJuridica pessoaJuridica)
         {
             Tipo = eTipoFornecedor.Pessoa_Juridica;
-            TipoEmpresa = tipoEmpresa;
             PessoaJuridica = pessoaJuridica;
 
             return this;
