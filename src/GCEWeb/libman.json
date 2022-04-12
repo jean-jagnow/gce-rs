@@ -1,0 +1,46 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "jquery@3.6.0",
+      "destination": "content/lib/jquery/",
+      "files": [
+        "jquery.min.js"
+      ]
+    },
+    {
+      "library": "bootstrap@4.6.1",
+      "destination": "content/lib/bootstrap/",
+      "files": [
+        "css/bootstrap.css",
+        "js/bootstrap.bundle.min.js"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery-validate@1.19.3",
+      "destination": "content/lib/jquery-validate/",
+      "files": [
+        "jquery.validate.min.js",
+        "localization/messages_pt_BR.min.js"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery-ajax-unobtrusive@3.2.6",
+      "destination": "content/lib/jquery-ajax-unobtrusive/",
+      "files": [
+        "jquery.unobtrusive-ajax.min.js"
+      ]
+    },
+    {
+      "provider": "cdnjs",
+      "library": "jquery-validation-unobtrusive@3.2.12",
+      "destination": "content/lib/jquery-validation-unobtrusive/",
+      "files": [
+        "jquery.validate.unobtrusive.min.js"
+      ]
+    }
+  ]
+}

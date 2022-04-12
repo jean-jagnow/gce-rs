@@ -1,0 +1,40 @@
+﻿.breadcrumb-item + .breadcrumb-item::before {
+    font-family: 'FontAwesome' !important;
+    content: "\f105" !important;
+}
+.bg-secondary {
+    background: #e6e6e6 !important;
+}
+.page-content .breadcrumb {
+    background-color: #dddddd !important;
+    margin-bottom: 0px !important;
+}
+.page-content .bg-info.alert {
+    padding: 0px !important; 
+    background-image: linear-gradient(to top right, #299383, #28a592, #2dc2ab);
+    border-radius: 0px !important;
+    color:#ffffff !important;
+}
+.page-content .bg-info.alert .btn {
+    border-radius: unset !important;
+    background-color:transparent !important;
+    border: solid #b7b7b7 1.1px !important;
+    border-top: unset !important;
+    border-bottom: unset !important;
+}
+    .page-content .bg-info.alert .btn:hover {
+        background-image: linear-gradient(to top right, #2c8e7e, #39a393);
+    }
+    .page-content .bg-info.alert .title {
+        margin-top: 7px;
+        margin-bottom: 7px;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+.tabela-container{
+    min-height: 75vh;
+}
+.dropdown-menu{
+    min-width:250px !important;
+}
