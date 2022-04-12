@@ -5,13 +5,15 @@ namespace GCE.Domain.Fornecedores
 {
     public class PessoaFisica : Detalhe
     {
-        public PessoaFisica(string cpf, string nome, string profissao, eGenero genero, Contato contato)
+        public PessoaFisica(string cpf, string nome, string profissao,
+            eGenero genero, Contato contato, DateTime dataNascimento)
         {
             Cpf = cpf;
             Nome = nome;
             Profissao = profissao;
             Genero = genero;
             Contato = contato;
+            DataNascimento = dataNascimento;
         }
 
         public string Cpf { get; set; }

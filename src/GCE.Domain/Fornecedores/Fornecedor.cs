@@ -1,4 +1,4 @@
-﻿using GCE.Application.Common;
+﻿using GCE.Domain.Common;
 using GCE.Domain.Cadastros;
 using GCE.Domain.Fornecedores.Common;
 
@@ -36,6 +36,14 @@ namespace GCE.Domain.Fornecedores
             PessoaJuridica = pessoaJuridica;
 
             return this;
+        }
+
+        public string ObterNome()
+        {
+            if (Tipo == eTipoFornecedor.Pessoa_Fisica)
+                return PessoaFisica.Nome;
+         
+            return PessoaJuridica.RazaoSocial;
         }
     }
 }
