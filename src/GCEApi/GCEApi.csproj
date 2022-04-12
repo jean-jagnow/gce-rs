@@ -89,6 +89,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\FornecedorController.cs" />
+    <Compile Include="Controllers\TipoEmpresaController.cs" />
+    <Compile Include="Controllers\PorteController.cs" />
     <Compile Include="Controllers\CaracterizacaoCapitalController.cs" />
     <Compile Include="Controllers\GCEApiController.cs" />
     <Compile Include="Filters\RequestValidateAttribute.cs" />
@@ -97,9 +100,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\InputModels\AlterarSituacaoInputModel.cs" />
+    <Compile Include="Models\InputModels\FornecedorPessoaJuridicanputModel.cs" />
+    <Compile Include="Models\InputModels\FornecedorPessoaFisicaInputModel.cs" />
+    <Compile Include="Models\InputModels\TipoEmpresaInputModel.cs" />
+    <Compile Include="Models\InputModels\PorteInputModel.cs" />
     <Compile Include="Models\InputModels\CaracterizacaoCapitalInputModel.cs" />
     <Compile Include="Models\InputModels\IInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Managers\FornecedorManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
