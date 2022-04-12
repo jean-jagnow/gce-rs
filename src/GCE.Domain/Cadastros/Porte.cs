@@ -1,4 +1,4 @@
-﻿using GCE.Application.Common;
+﻿using GCE.Domain.Common;
 using System.Collections.Generic;
 
 namespace GCE.Domain.Cadastros

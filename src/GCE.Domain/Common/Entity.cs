@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GCE.Application.Common
+namespace GCE.Domain.Common
 {
     public abstract class Entity
     {

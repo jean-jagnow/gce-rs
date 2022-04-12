@@ -7,8 +7,8 @@
     <ProjectGuid>{2E3BA03D-7454-468C-BBAE-4A8533677D68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GCE.Application</RootNamespace>
-    <AssemblyName>GCE.Application</AssemblyName>
+    <RootNamespace>GCE.Domain</RootNamespace>
+    <AssemblyName>GCE.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

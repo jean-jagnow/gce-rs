@@ -9,7 +9,7 @@ namespace GCE.Domain.Fornecedores
         private PessoaJuridica()
         {
         }
-        public PessoaJuridica(string cnpj, string razaoSocial, Porte porteEmpresa,
+        public PessoaJuridica(string cnpj, string razaoSocial, string nomeFantasia, Porte porteEmpresa,
             ContatoPessoaJuridica contato, decimal capitalSocial)
         {
             Cnpj = cnpj;
@@ -17,6 +17,7 @@ namespace GCE.Domain.Fornecedores
             PorteEmpresa = porteEmpresa;
             Contato = contato;
             CapitalSocial = capitalSocial;
+            NomeFantasia = nomeFantasia;
         }
 
         public string Cnpj { get; set; }

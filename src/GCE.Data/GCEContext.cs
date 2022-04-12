@@ -3,11 +3,9 @@ using GCE.Data.Configs.Fornecedores;
 using GCE.Domain.Cadastros;
 using GCE.Domain.Fornecedores;
 using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using GCE.Domain.Common;
 
 namespace GCE.Data
 {
@@ -15,6 +13,7 @@ namespace GCE.Data
     {
         public GCEContext() : base("GCELocalDb")
         {
+            Database.SetInitializer(new Strategy.DbInit());
         }
 
         public DbSet<CaracterizacaoCapital> CaracterizacaoCapital { get; set; }
@@ -33,6 +32,21 @@ namespace GCE.Data
             modelBuilder.Configurations.Add(new FornecedorConfiguration());
             modelBuilder.Configurations.Add(new FornecedorPessoaFisicaConfiguration());
             modelBuilder.Configurations.Add(new FornecedorPessoaJuridicaConfiguration());
+        }
+
+        public override int SaveChanges()
+        {
+            foreach(var item in ChangeTracker.Entries()
+                .Where(x => x.State == EntityState.Modified))
+            {
+                if(item.Entity is Entity)
+                {
+                    var entity = item.Entity as Entity;
+                    entity.DataDaUltimaAlteracao = DateTime.Now;
+                }
+            }
+
+            return base.SaveChanges();
         }
 
     }
